@@ -1,0 +1,360 @@
+/* Supprime les marges et paddings par défaut du body */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.home-container {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1000;
+  margin: 0;
+}
+
+.logo img {
+  height: 200px;
+  width: 200px;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  min-width: 40px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 1001;
+  position: absolute;
+  right: 20px;
+  margin: 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 2000;
+  visibility: hidden;
+  margin: 0;
+}
+
+.sidebar.open {
+  right: 0;
+  visibility: visible;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2001;
+  margin: 0;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0;
+}
+
+.hero {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: bicubic;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 80vh;
+  }
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 70%);
+  z-index: 2;
+}
+
+.text-section {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  background-color: #141B1A;
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+  height: auto;
+  position: relative;
+}
+
+/* CAROUSEL MODIFIÉ */
+.photo-gallery {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: auto;
+}
+
+.photo-container {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 100%; /* Assure que le conteneur prend toute la largeur */
+}
+
+.bike-card {
+  position: relative;
+  flex-shrink: 0;
+  width: calc(100% / 3); /* 3 images par slide sur desktop */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bike-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 800px;
+  max-width: 100%; /* Ajuste la largeur pour s'adapter */
+  margin: 0 auto;
+  position: relative;
+}
+
+.model-label {
+  position: absolute;
+  top: 10px;
+  left: 15%;
+  transform: translateX(-50%) rotate(-30deg); /* Effet traversant */
+  font-family: 'Dancing Script', 'Pacifico', cursive; /* Police demandée */
+  font-size: 2rem;
+  color: #63bdaf;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour lisibilité */
+  background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  padding: 5px 15px;
+  border-radius: 5px;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 65%; /* Positionne les boutons plus haut */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 2;
+}
+
+.card-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.card-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+/* FIN CAROUSEL MODIFIÉ */
+
+.stroke-title {
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  line-height: 1.1;
+  -webkit-text-stroke: 1px rgba(245, 248, 244, 0.7);
+  text-shadow: 2px 2px 4px #141B1A;
+  color: #141B1A;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 150px; /* Ajoute un espace pour que le texte ne bouge pas */
+}
+
+/* Nouvelles classes pour l'effet machine à écrire */
+.typewriter-text {
+  color: #fff;
+  white-space: pre-wrap; /* Permet les sauts de ligne */
+}
+
+.cursor {
+  border-right: 2px solid #fff; /* Crée le curseur */
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Animation du curseur */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #fff; }
+}
+
+/* Animation machine à écrire lettre par lettre */
+@keyframes typewriter-effect {
+  0% { width: 0; }
+  100% { width: 100%; } /* Affiche une lettre à la fois sur toute la durée */
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.btn {
+  background-color: #dc2626;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0;
+}
+
+@media (max-width: 1023px) {
+  .bike-card {
+    width: 100%; /* Une image par slide sur mobile/tablette */
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 100px;
+    width: 180px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .stroke-title {
+    font-size: 48px;
+  }
+
+  .text-section {
+    padding: 30px 20px;
+  }
+
+  .model-label {
+    font-size: 1.5rem; /* Réduit la taille sur mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 80px;
+    width: 140px;
+  }
+
+  .stroke-title {
+    font-size: 36px;
+  }
+
+  .text-section {
+    padding: 20px 10px;
+  }
+
+  .model-label {
+    font-size: 2rem; /* Réduit encore plus sur petit écran */
+  }
+}
