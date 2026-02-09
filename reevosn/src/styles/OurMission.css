@@ -1,0 +1,377 @@
+/* ═══════════════════════════════════════════════════════════════
+   CSS POUR LA PAGE NOTRE MISSION - REVOO
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Import des styles de base */
+/* Mission Statement */
+.mission-statement {
+  padding: 80px 20px;
+  background: white;
+}
+
+.statement-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mission-text {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #444;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.mission-text strong {
+  color: #00FF00;
+  font-weight: 700;
+}
+
+/* Pillars Section */
+.pillars-section {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pillar-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 40px rgba(0, 255, 0, 0.15);
+}
+
+.pillar-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.pillar-icon.green {
+  background: linear-gradient(135deg, #00FF00, #00CC00);
+}
+
+.pillar-icon.blue {
+  background: linear-gradient(135deg, #0EA5E9, #0284C7);
+}
+
+.pillar-icon.orange {
+  background: linear-gradient(135deg, #F97316, #EA580C);
+}
+
+.pillar-icon.purple {
+  background: linear-gradient(135deg, #A855F7, #9333EA);
+}
+
+.pillar-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 20px 0;
+}
+
+.pillar-card > p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.pillar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pillar-list li {
+  padding: 12px 0 12px 35px;
+  position: relative;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.pillar-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #00FF00;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Impact Section */
+.impact-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #000 0%, #2d2d2d 100%);
+  color: white;
+}
+
+.impact-section .section-title {
+  color: white;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.impact-card {
+  text-align: center;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 2px solid rgba(0, 255, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.impact-card:hover {
+  background: rgba(0, 255, 0, 0.1);
+  border-color: #00FF00;
+  transform: scale(1.05);
+}
+
+.impact-number {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #00FF00;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+
+.impact-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.impact-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* Vision Section */
+.vision-section {
+  padding: 80px 20px;
+  background: white;
+}
+
+.vision-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.vision-item {
+  padding: 35px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f0f0f0 100%);
+  border-radius: 20px;
+  border-left: 6px solid #00FF00;
+  transition: all 0.3s ease;
+}
+
+.vision-item:hover {
+  background: linear-gradient(135deg, #f0f9f7 0%, #e6f5f2 100%);
+  transform: translateX(10px);
+  box-shadow: 0 8px 30px rgba(0, 255, 0, 0.15);
+}
+
+.vision-item h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 15px 0;
+}
+
+.vision-item p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Commitments Section */
+.commitments-section {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.commitments-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.commitment-item {
+  display: flex;
+  gap: 25px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.commitment-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 6px 25px rgba(0, 255, 0, 0.15);
+}
+
+.commitment-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.commitment-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 10px 0;
+}
+
+.commitment-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive Mission Page */
+@media (max-width: 1024px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vision-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-text {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .pillar-card {
+    padding: 30px 25px;
+  }
+
+  .pillar-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .pillar-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .impact-number {
+    font-size: 2.8rem;
+  }
+
+  .impact-label {
+    font-size: 1rem;
+  }
+
+  .vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .commitment-item {
+    flex-direction: column;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-text {
+    font-size: 0.95rem;
+  }
+
+  .pillar-card {
+    padding: 25px 20px;
+  }
+
+  .pillar-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .pillar-list li {
+    font-size: 0.9rem;
+    padding-left: 30px;
+  }
+
+  .impact-card {
+    padding: 30px 20px;
+  }
+
+  .impact-number {
+    font-size: 2.5rem;
+  }
+
+  .vision-item {
+    padding: 25px;
+  }
+
+  .vision-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .vision-item p {
+    font-size: 0.9rem;
+  }
+
+  .commitment-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .commitment-content p {
+    font-size: 0.9rem;
+  }
+}
