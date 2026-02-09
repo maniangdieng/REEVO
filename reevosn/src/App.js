@@ -7,10 +7,17 @@ import OurStory from './pages/OurStory';
 import OurMission from './pages/OurMission';
 import Warranty from './pages/Warranty';
 import './App.css';
+import { HashRouter } from "react-router-dom";
+
 
 function App() {
   return (
+    
     <Router>
+    
+<HashRouter>
+  <App />
+</HashRouter>
       <div className="App">
         <Routes>
           {/* Page d'accueil */}
