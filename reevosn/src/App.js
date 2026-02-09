@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import ProductComparison from './pages/ProductComparison';
 import FAQ from './pages/FAQ';
@@ -7,40 +7,31 @@ import OurStory from './pages/OurStory';
 import OurMission from './pages/OurMission';
 import Warranty from './pages/Warranty';
 import './App.css';
-import { HashRouter } from "react-router-dom";
-
 
 function App() {
   return (
-    
-    <Router>
-    
-<HashRouter>
-  <App />
-</HashRouter>
+    <HashRouter>
       <div className="App">
         <Routes>
           {/* Page d'accueil */}
           <Route path="/" element={<Home />} />
-          
+
           {/* Pages produits */}
           <Route path="/product-comparison" element={<ProductComparison />} />
-          
+
           {/* Pages À propos */}
           <Route path="/our-story" element={<OurStory />} />
           <Route path="/our-mission" element={<OurMission />} />
-          
+
           {/* Pages Assistance */}
           <Route path="/faq" element={<FAQ />} />
           <Route path="/warranty" element={<Warranty />} />
-          
-          {/* Page Contact */}
-          
+
           {/* 404 - Page non trouvée */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
