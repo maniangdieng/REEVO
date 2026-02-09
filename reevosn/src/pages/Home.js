@@ -117,19 +117,7 @@ const Home = () => {
   ];
 
   const motorcycleModels = [
-    {
-      id: 1,
-      name: 'A10',
-      series: 'a-series',
-      tagline: 'REBORN IN LITHIUM',
-      image: 'A10.jpg',
-      backgroundColor: '#f5f5f5',
-      specs: {
-        topSpeed: '35-55KM/H',
-        range: '80-110KM',
-        capacity: '72V 35Ah'
-      }
-    },
+    
     {
       id: 1,
       name: 'A12 LFP',
